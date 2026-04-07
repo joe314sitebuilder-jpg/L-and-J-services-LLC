@@ -1,127 +1,123 @@
 import { Link } from 'react-router-dom';
-import { CheckCircle2, ArrowRight } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 export default function Services() {
   return (
-    <div>
+    <div className="bg-white">
       {/* Header */}
-      <div className="bg-blue-900 text-white py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">Our Cleaning Services</h1>
-          <p className="text-xl text-blue-100 max-w-2xl mx-auto">Professional, thorough, and reliable house cleaning tailored to your needs in St. Louis, MO.</p>
-        </div>
+      <div className="pt-24 pb-16 px-6 lg:px-8 max-w-7xl mx-auto">
+        <h1 className="text-4xl md:text-6xl font-medium text-slate-900 tracking-tight mb-6">Our Services.</h1>
+        <p className="text-lg text-slate-500 max-w-2xl">
+          Professional, thorough, and reliable house cleaning tailored to your needs in St. Louis.
+        </p>
       </div>
 
       {/* Services List */}
-      <div className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-24">
+      <div className="pb-24">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 space-y-32">
           
           {/* Standard Cleaning */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="order-2 lg:order-1">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Standard Cleaning</h2>
-              <p className="text-lg text-gray-600 mb-6">
-                Our standard cleaning service is perfect for maintaining a beautiful, healthy home. We recommend this service on a weekly, bi-weekly, or monthly basis to keep your house looking its best.
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <div className="text-xs font-medium text-slate-400 uppercase tracking-wider mb-4">01</div>
+              <h2 className="text-3xl font-medium text-slate-900 tracking-tight mb-4">Standard Clean</h2>
+              <p className="text-slate-500 mb-8 leading-relaxed">
+                Perfect for maintaining a beautiful, healthy home. We recommend this service on a weekly, bi-weekly, or monthly basis.
               </p>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">What's Included:</h3>
-              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
-                <li className="flex items-start"><CheckCircle2 className="w-5 h-5 text-emerald-500 mr-2 shrink-0" /> <span className="text-gray-600">Dusting all surfaces</span></li>
-                <li className="flex items-start"><CheckCircle2 className="w-5 h-5 text-emerald-500 mr-2 shrink-0" /> <span className="text-gray-600">Vacuuming carpets & rugs</span></li>
-                <li className="flex items-start"><CheckCircle2 className="w-5 h-5 text-emerald-500 mr-2 shrink-0" /> <span className="text-gray-600">Mopping hard floors</span></li>
-                <li className="flex items-start"><CheckCircle2 className="w-5 h-5 text-emerald-500 mr-2 shrink-0" /> <span className="text-gray-600">Wiping down countertops</span></li>
-                <li className="flex items-start"><CheckCircle2 className="w-5 h-5 text-emerald-500 mr-2 shrink-0" /> <span className="text-gray-600">Cleaning sinks & mirrors</span></li>
-                <li className="flex items-start"><CheckCircle2 className="w-5 h-5 text-emerald-500 mr-2 shrink-0" /> <span className="text-gray-600">Sanitizing toilets & tubs</span></li>
-                <li className="flex items-start"><CheckCircle2 className="w-5 h-5 text-emerald-500 mr-2 shrink-0" /> <span className="text-gray-600">Emptying trash bins</span></li>
-                <li className="flex items-start"><CheckCircle2 className="w-5 h-5 text-emerald-500 mr-2 shrink-0" /> <span className="text-gray-600">Making beds (upon request)</span></li>
-              </ul>
-              <Link to="/contact" className="inline-flex items-center text-blue-600 font-bold hover:text-blue-800 transition-colors">
-                Get a quote for standard cleaning <ArrowRight className="ml-2 w-5 h-5" />
+              
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-3 gap-x-8 mb-10 text-sm text-slate-600">
+                <div className="flex items-center border-b border-slate-100 pb-2">Dusting all surfaces</div>
+                <div className="flex items-center border-b border-slate-100 pb-2">Vacuuming carpets</div>
+                <div className="flex items-center border-b border-slate-100 pb-2">Mopping hard floors</div>
+                <div className="flex items-center border-b border-slate-100 pb-2">Wiping countertops</div>
+                <div className="flex items-center border-b border-slate-100 pb-2">Cleaning sinks & mirrors</div>
+                <div className="flex items-center border-b border-slate-100 pb-2">Sanitizing bathrooms</div>
+                <div className="flex items-center border-b border-slate-100 pb-2">Emptying trash</div>
+                <div className="flex items-center border-b border-slate-100 pb-2">Making beds</div>
+              </div>
+              
+              <Link to="/contact" className="inline-flex items-center text-sm font-medium text-slate-900 hover:text-slate-600 transition-colors">
+                Book this service <ArrowRight className="ml-2 w-4 h-4" />
               </Link>
             </div>
-            <div className="order-1 lg:order-2">
+            <div className="bg-slate-100 rounded-3xl overflow-hidden aspect-square lg:aspect-[4/3]">
               <img 
                 src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&q=80&w=1000" 
                 alt="Standard house cleaning" 
-                className="rounded-2xl shadow-lg w-full h-[400px] object-cover"
+                className="w-full h-full object-cover"
                 referrerPolicy="no-referrer"
               />
             </div>
           </div>
 
           {/* Deep Cleaning */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div className="order-2 lg:order-1 bg-slate-100 rounded-3xl overflow-hidden aspect-square lg:aspect-[4/3]">
               <img 
                 src="https://images.unsplash.com/photo-1527515862127-a4fc05baf7a5?auto=format&fit=crop&q=80&w=1000" 
                 alt="Deep house cleaning" 
-                className="rounded-2xl shadow-lg w-full h-[400px] object-cover"
+                className="w-full h-full object-cover"
                 referrerPolicy="no-referrer"
               />
             </div>
-            <div>
-              <div className="inline-block bg-emerald-100 text-emerald-800 text-sm font-bold px-3 py-1 rounded-full mb-4">MOST POPULAR</div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Deep Cleaning</h2>
-              <p className="text-lg text-gray-600 mb-6">
-                A thorough, top-to-bottom clean. This is ideal for spring cleaning, preparing for holidays, or if your home hasn't been professionally cleaned in a few months.
+            <div className="order-1 lg:order-2">
+              <div className="text-xs font-medium text-slate-400 uppercase tracking-wider mb-4">02</div>
+              <h2 className="text-3xl font-medium text-slate-900 tracking-tight mb-4">Deep Clean</h2>
+              <p className="text-slate-500 mb-8 leading-relaxed">
+                A thorough, top-to-bottom clean. Ideal for spring cleaning or if your home hasn't been professionally cleaned recently.
               </p>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Everything in Standard, PLUS:</h3>
-              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
-                <li className="flex items-start"><CheckCircle2 className="w-5 h-5 text-emerald-500 mr-2 shrink-0" /> <span className="text-gray-600">Hand-wiping baseboards</span></li>
-                <li className="flex items-start"><CheckCircle2 className="w-5 h-5 text-emerald-500 mr-2 shrink-0" /> <span className="text-gray-600">Cleaning blinds & shutters</span></li>
-                <li className="flex items-start"><CheckCircle2 className="w-5 h-5 text-emerald-500 mr-2 shrink-0" /> <span className="text-gray-600">Wiping ceiling fans & vents</span></li>
-                <li className="flex items-start"><CheckCircle2 className="w-5 h-5 text-emerald-500 mr-2 shrink-0" /> <span className="text-gray-600">Cleaning inside microwave</span></li>
-                <li className="flex items-start"><CheckCircle2 className="w-5 h-5 text-emerald-500 mr-2 shrink-0" /> <span className="text-gray-600">Wiping cabinet exteriors</span></li>
-                <li className="flex items-start"><CheckCircle2 className="w-5 h-5 text-emerald-500 mr-2 shrink-0" /> <span className="text-gray-600">Detailed door frame cleaning</span></li>
-                <li className="flex items-start"><CheckCircle2 className="w-5 h-5 text-emerald-500 mr-2 shrink-0" /> <span className="text-gray-600">Heavy scrub of bathrooms</span></li>
-                <li className="flex items-start"><CheckCircle2 className="w-5 h-5 text-emerald-500 mr-2 shrink-0" /> <span className="text-gray-600">Moving light furniture to clean</span></li>
-              </ul>
-              <Link to="/contact" className="inline-flex items-center text-blue-600 font-bold hover:text-blue-800 transition-colors">
-                Get a quote for deep cleaning <ArrowRight className="ml-2 w-5 h-5" />
+              
+              <p className="text-sm font-medium text-slate-900 mb-4">Everything in Standard, plus:</p>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-3 gap-x-8 mb-10 text-sm text-slate-600">
+                <div className="flex items-center border-b border-slate-100 pb-2">Hand-wiping baseboards</div>
+                <div className="flex items-center border-b border-slate-100 pb-2">Cleaning blinds</div>
+                <div className="flex items-center border-b border-slate-100 pb-2">Wiping ceiling fans</div>
+                <div className="flex items-center border-b border-slate-100 pb-2">Inside microwave</div>
+                <div className="flex items-center border-b border-slate-100 pb-2">Cabinet exteriors</div>
+                <div className="flex items-center border-b border-slate-100 pb-2">Door frames</div>
+                <div className="flex items-center border-b border-slate-100 pb-2">Heavy scrub of tubs</div>
+                <div className="flex items-center border-b border-slate-100 pb-2">Moving light furniture</div>
+              </div>
+              
+              <Link to="/contact" className="inline-flex items-center text-sm font-medium text-slate-900 hover:text-slate-600 transition-colors">
+                Book this service <ArrowRight className="ml-2 w-4 h-4" />
               </Link>
             </div>
           </div>
 
           {/* Move In/Out Cleaning */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="order-2 lg:order-1">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Move-In / Move-Out Cleaning</h2>
-              <p className="text-lg text-gray-600 mb-6">
-                Moving is stressful enough. Let us handle the cleaning. We ensure the home is completely spotless and ready for the next resident or your family's arrival.
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <div className="text-xs font-medium text-slate-400 uppercase tracking-wider mb-4">03</div>
+              <h2 className="text-3xl font-medium text-slate-900 tracking-tight mb-4">Move In / Out</h2>
+              <p className="text-slate-500 mb-8 leading-relaxed">
+                Moving is stressful enough. Let us handle the cleaning. We ensure the home is completely spotless for the next chapter.
               </p>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Everything in Deep Clean, PLUS:</h3>
-              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
-                <li className="flex items-start"><CheckCircle2 className="w-5 h-5 text-emerald-500 mr-2 shrink-0" /> <span className="text-gray-600">Inside all cabinets & drawers</span></li>
-                <li className="flex items-start"><CheckCircle2 className="w-5 h-5 text-emerald-500 mr-2 shrink-0" /> <span className="text-gray-600">Inside the refrigerator</span></li>
-                <li className="flex items-start"><CheckCircle2 className="w-5 h-5 text-emerald-500 mr-2 shrink-0" /> <span className="text-gray-600">Inside the oven</span></li>
-                <li className="flex items-start"><CheckCircle2 className="w-5 h-5 text-emerald-500 mr-2 shrink-0" /> <span className="text-gray-600">Cleaning closet shelves</span></li>
-                <li className="flex items-start"><CheckCircle2 className="w-5 h-5 text-emerald-500 mr-2 shrink-0" /> <span className="text-gray-600">Spot cleaning walls</span></li>
-                <li className="flex items-start"><CheckCircle2 className="w-5 h-5 text-emerald-500 mr-2 shrink-0" /> <span className="text-gray-600">Sweeping garage/patio</span></li>
-              </ul>
-              <Link to="/contact" className="inline-flex items-center text-blue-600 font-bold hover:text-blue-800 transition-colors">
-                Get a quote for move-in/out cleaning <ArrowRight className="ml-2 w-5 h-5" />
+              
+              <p className="text-sm font-medium text-slate-900 mb-4">Everything in Deep Clean, plus:</p>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-3 gap-x-8 mb-10 text-sm text-slate-600">
+                <div className="flex items-center border-b border-slate-100 pb-2">Inside all cabinets</div>
+                <div className="flex items-center border-b border-slate-100 pb-2">Inside refrigerator</div>
+                <div className="flex items-center border-b border-slate-100 pb-2">Inside oven</div>
+                <div className="flex items-center border-b border-slate-100 pb-2">Closet shelves</div>
+                <div className="flex items-center border-b border-slate-100 pb-2">Spot cleaning walls</div>
+                <div className="flex items-center border-b border-slate-100 pb-2">Sweeping garage</div>
+              </div>
+              
+              <Link to="/contact" className="inline-flex items-center text-sm font-medium text-slate-900 hover:text-slate-600 transition-colors">
+                Book this service <ArrowRight className="ml-2 w-4 h-4" />
               </Link>
             </div>
-            <div className="order-1 lg:order-2">
+            <div className="bg-slate-100 rounded-3xl overflow-hidden aspect-square lg:aspect-[4/3]">
               <img 
                 src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1000" 
                 alt="Empty clean house" 
-                className="rounded-2xl shadow-lg w-full h-[400px] object-cover"
+                className="w-full h-full object-cover"
                 referrerPolicy="no-referrer"
               />
             </div>
           </div>
 
-        </div>
-      </div>
-
-      {/* CTA */}
-      <div className="bg-emerald-500 text-white py-16">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-4">Not sure which service you need?</h2>
-          <p className="text-xl mb-8 text-emerald-50">Call us today. We'll ask a few simple questions and recommend the best cleaning package for your home.</p>
-          <a href="tel:314-949-3026" className="inline-block bg-white text-emerald-600 hover:bg-gray-50 px-8 py-4 rounded-md font-bold text-lg transition-colors shadow-lg">
-            Call (314) 949-3026
-          </a>
         </div>
       </div>
     </div>
